@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export const weatherApiKey = 'YOUR KEY';
+export const imgApiKey = 'YOUR KEY';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -1,0 +1,187 @@
+.background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 25%, transparent 100%);
+    pointer-events: none;
+}
+
+.overlay {
+    position: relative;
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    z-index: 1;
+}
+
+.form {
+    width: fit-content;
+    margin-left: 3rem;
+}
+
+.form button {
+    background: none;
+    border: none;
+}
+
+.form span {
+    color: white;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.location-input {
+    width: 800px;
+    background: none;
+    border: none;
+    border-bottom-style: solid;
+    font-family: Geologica, sans-serif;
+    font-size: 10rem;
+    color: white;
+    margin: 0;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.today {
+    width: fit-content;
+}
+
+.today-container {
+    display: flex;
+    margin-left: 50px;
+    height: 300px;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.today-container h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.today-info {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.today-info h2 {
+    margin: 25px 0 -5px 0;
+}
+
+.today img {
+    width: 300px;
+    height: fit-content;
+}
+
+.today-temp-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-family: Geologica, sans-serif;
+    font-size: 3rem;
+}
+
+.today-temp-container p {
+    margin: 0;
+}
+
+.today-temp-container .max-temp {
+    color: rgb(216, 78, 78);
+    font-size: 5rem;
+}
+
+.today-temp-container .min-temp {
+    color: rgb(87, 87, 252);
+    font-size: 5rem;
+}
+
+.today .info-window {
+    height: 100vh;
+    margin: 0 auto;
+    width: 100vw;
+    overflow: visible;
+}
+
+.day-forecast {
+    display: flex;
+    margin-left: 30px;
+    gap: 30px;
+    width: calc(100vw - 30px);
+    overflow-x: auto;
+}
+
+.day-forecast::-webkit-scrollbar {
+    width: 10px;
+}
+
+.day-forecast::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.day-forecast::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.day-forecast::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.day-card {
+    width: 180px;
+    color: white;
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.day-card img {
+    width: 100px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.condition {
+    margin: 0;
+}
+
+.temp-container {
+    display: flex;
+    font-size: 2rem;
+    gap: 5px;
+    margin: 25px 0;
+    padding: 30px 0;
+}
+
+.temp-container p {
+    line-height: 0.5rem;
+    margin: 0;
+}
+
+.max-temp {
+    color: rgb(216, 78, 78);
+    font-size: 3rem;
+}
+
+.min-temp {
+    color: rgb(153, 153, 235);
+    font-size: 3rem;
+}

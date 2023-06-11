@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Weather App - Project Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This portfolio project involved building a weather forecast application using React.js, and making API calls to Pexels and WeatherAPI. The application takes in a location input and returns a 14-day weather forecast for that location along with an associated image from Pexels.
 
-## Available Scripts
+## What I did
 
-In the project directory, you can run:
+- React Components and State Management: Created a functional React component `Home` that handles state using the `useState` and `useEffect` hooks.
 
-### `npm start`
+- API Calls: Used axios to make GET requests to the Pexels and WeatherAPI APIs, providing search queries and handling responses.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Conditional Rendering: Implemented conditional rendering in React to handle the display of data based on whether the forecast data was available or not.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Styling and CSS: Used CSS for custom component styling, implemented background images for visual appeal.
 
-### `npm test`
+- Scroll Functionality: Implemented custom horizontal scrolling functionality using the `wheel` event and `useRef` hook.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What I learned
 
-### `npm run build`
+- React Hooks: This project deepened my understanding of React hooks, specifically `useState`, `useEffect`, and `useRef`. I learned how to manage component state and side effects in a functional component, and how to reference DOM elements directly in React.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- API Integration: I gained practical experience in integrating third-party APIs in a React application. I understood the process of making API calls, handling responses, and error cases.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Styling: This project enhanced my skills in CSS, especially with dynamic styling based on state and implementing custom scrolling behavior. I also learned some specific techniques, such as the use of gradiant overlay on top of the image to improve the usability.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Error Handling: I learned the importance of handling error cases while making API calls and how to provide feedback to the user in such cases.
