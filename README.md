@@ -23,3 +23,7 @@ This portfolio project involved building a weather forecast application using Re
 - Styling: This project enhanced my skills in CSS, especially with dynamic styling based on state and implementing custom scrolling behavior. I also learned some specific techniques, such as the use of gradiant overlay on top of the image to improve the usability.
 
 - Error Handling: I learned the importance of handling error cases while making API calls and how to provide feedback to the user in such cases.
+
+## Acknowledgements
+
+I used GPT-4 to work on this project. 
