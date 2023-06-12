@@ -15,7 +15,8 @@ export default function Home() {
     const [location, setLocation] = useState('');
     const [imageUrl, setImageUrl] = useState('');
     const [forecastData, setForecastData] = useState(null);
-    const [fontSize, setFontSize] = useState('2em'); // Initialize font size
+    const [fontSize, setFontSize] = useState('2em');
+    const [searchFontSize, setSearchFontSize] = useState('1em');
 
     // API Keys for Image and Weather
     const imgApi = imgApiKey;
@@ -24,11 +25,11 @@ export default function Home() {
     // useEffect hook to adjust font size based on the length of the location
     useEffect(() => {
         if (location.length > 20) {
-            setFontSize('5rem');
+            setFontSize('1rem');
         } else if (location.length > 10) {
-            setFontSize('8rem');
+            setFontSize('2rem');
         } else {
-            setFontSize('10rem');
+            setFontSize('3rem');
         }
     }, [location]);
 
@@ -79,7 +80,7 @@ export default function Home() {
             // Fetch weather from WeatherAPI
             const weatherResponse = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${weatherApi}&q=${location}&days=14`);
             setForecastData(weatherResponse.data.forecast.forecastday);
-
+            console.log(forecastData);
         } catch (error) {
             console.error(error);
         }
@@ -103,7 +104,7 @@ export default function Home() {
                             placeholder="Location"
                             style={{ fontSize }}
                         />
-                        <button type="submit"><span class="material-symbols-outlined" style={{ fontSize }}>
+                        <button type="submit" style={{ searchFontSize }}><span class="material-symbols-outlined" style={{ fontSize }}>
                             search
                         </span></button>
                     </form>
@@ -121,14 +122,13 @@ export default function Home() {
                                         <p>°C</p>
                                     </div>
                                 </div>
-
                             </div>
                             : <></>}
                     </div>
                     <div className="info-window">
                         <div className="info-container">
                             <div className="day-forecast" ref={forecastRef}>
-                                {forecastData && forecastData.slice(1).map((day, index) => (
+                                {forecastData && forecastData.map((day, index) => (
                                     <div className="day-card" key={index}>
                                         <div className="img-container">
                                             <img src={day.day.condition.icon} />
@@ -141,6 +141,26 @@ export default function Home() {
                                             <p className="min-temp">{Math.round(day.day.mintemp_c)}</p>
                                             <p>°C</p>
                                         </div>
+                                        <div>
+                                            <div className="more-info-container">
+                                                <p><span class="material-symbols-outlined">
+                                                    air
+                                                </span></p>
+                                                <p>{day.day.maxwind_kph} km/h</p>
+                                            </div>
+                                            <div className="more-info-container">
+                                                <p><span class="material-symbols-outlined">
+                                                    water_drop
+                                                </span></p>
+                                                <p>{day.day.avghumidity} %</p>
+                                            </div>
+                                            <div className="more-info-container">
+                                                <p><span class="material-symbols-outlined">
+                                                    water
+                                                </span></p>
+                                                <p>{day.day.totalprecip_mm} mm</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -148,6 +168,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };

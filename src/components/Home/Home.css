@@ -14,7 +14,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 25%, transparent 100%);
     pointer-events: none;
 }
 
@@ -31,7 +30,7 @@
 
 .form {
     width: fit-content;
-    margin-left: 3rem;
+    margin: 25px auto 0 auto;
 }
 
 .form button {
@@ -45,7 +44,7 @@
 }
 
 .location-input {
-    width: 800px;
+    width: 400px;
     background: none;
     border: none;
     border-bottom-style: solid;
@@ -53,20 +52,24 @@
     font-size: 10rem;
     color: white;
     margin: 0;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     outline: none;
 }
 
 .today {
     width: fit-content;
+    margin: 0 auto;
 }
 
 .today-container {
     display: flex;
-    margin-left: 50px;
+    padding: 25px;
     height: 300px;
+    border-radius: 25px;
     color: white;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .today-container h1 {
@@ -120,14 +123,15 @@
 
 .day-forecast {
     display: flex;
-    margin-left: 30px;
+    margin: 0 auto;
     gap: 30px;
-    width: calc(100vw - 30px);
+    width: calc(80vw);
     overflow-x: auto;
 }
 
 .day-forecast::-webkit-scrollbar {
     width: 10px;
+    height: 5px;
 }
 
 .day-forecast::-webkit-scrollbar-track {
@@ -184,4 +188,13 @@
 .min-temp {
     color: rgb(153, 153, 235);
     font-size: 3rem;
+}
+
+.more-info-container {
+    display: flex;
+    gap: 10px;
+}
+
+.more-info-container p {
+    margin: 0;
 }
