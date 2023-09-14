@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-export const weatherApiKey = '';
-export const imgApiKey = '';
+export const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
+export const imgApiKey = process.env.REACT_APP_IMG_API_KEY;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

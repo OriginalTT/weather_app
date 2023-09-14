@@ -65,11 +65,10 @@
     display: flex;
     padding: 25px;
     height: 300px;
-    border-radius: 25px;
     color: white;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .today-container h1 {

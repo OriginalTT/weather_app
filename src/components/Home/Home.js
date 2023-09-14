@@ -78,7 +78,7 @@ export default function Home() {
             }
 
             // Fetch weather from WeatherAPI
-            const weatherResponse = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${weatherApi}&q=${location}&days=14`);
+            const weatherResponse = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${weatherApi}&q=${location}&days=10&aqi=no&alerts=no`);
             setForecastData(weatherResponse.data.forecast.forecastday);
             console.log(forecastData);
         } catch (error) {
